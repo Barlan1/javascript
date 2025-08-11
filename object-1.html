@@ -1,0 +1,16 @@
+
+<script>
+
+  function Person(name, age, address ) {
+    this.name = name;
+    this.age = age;
+    this.address = address;
+    this.sayHello = function() {
+      console.log(`My name is ${this.name} I live in ${this.address} I am   ${this.age} year old`);
+    };
+  }
+    const p1 = new Person("Vikas", "Suparo",42 );
+    p1.sayHello();
+  
+
+</script>
