@@ -1,0 +1,40 @@
+<script>
+// array.Map() method
+const a=[2,3,4,5,6,7];
+const b =  a.map(myfunction);
+
+function myfunction(element,index,array){
+   return element * element ;
+}
+
+console.log("array a : " + a.join());
+console.log("array b is mapping a : " + b.join(" "));
+
+
+//array.flatMap()
+const c= [3,5,7,9,11,13];
+const d = c.flatMap((x) => x*2); 
+
+
+
+console.log("array c : " + c.join(" "));
+console.log("array d is flatMapping c : " + d.join(" "));
+
+// filter() method
+
+const num= [23,45,12,78,2,16];
+const over16 = num.filter(myfun);
+
+function myfun(element,index,array) {
+  return element > 16;
+}
+
+console.log("array num : " + num.join(" "));
+console.log("array over16 is filtering array num : " + over16.join(" "));
+
+
+
+
+
+
+</script>
