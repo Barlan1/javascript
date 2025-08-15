@@ -1,0 +1,30 @@
+
+
+<script>
+
+function myfunction() {
+    let count = 0;
+
+    return {
+        increment: function () {
+            count =count + 10;
+                return {value:count, done:false};
+        },
+        reset: function() {
+           count=0;
+            return {value:count,done:false};
+        }
+        
+    };
+}
+const counter =myfunction();
+
+counter.increment(); 
+counter.increment(); 
+console.log(counter.increment().value);
+  
+counter.reset();
+  console.log(counter.reset().value);
+
+</script>
+

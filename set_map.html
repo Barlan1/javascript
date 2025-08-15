@@ -1,0 +1,42 @@
+
+
+<script>
+
+let  s1= new Set(["a", "b","c","d"]);
+
+for(let  x of s1 ){
+    console.log(x +" " );
+}
+
+console.log(" new function");
+const arr=  [3,4,5,8,7];
+
+for (const x of arr){
+  console.log(x + "");
+}
+
+console.log("Next");
+
+const fruits = new Map([
+  ["apples", 100],
+  ["carrots", 200],
+  ["oranges", 300]
+]);
+
+const mapItr = fruits.values();
+
+for( const x of mapItr){
+  console.log(mapItr.next().value);
+}
+
+ console.log(fruits.keys(), fruits.values[0]);
+
+const juices = new Map();
+
+juices.set("apples", 100);
+juices.set("condoms", 200);
+juices.set("soda",400);
+
+//console.log(juices.entries());
+
+</script>

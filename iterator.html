@@ -1,0 +1,24 @@
+
+
+<script>
+
+  function myfunction() {
+    let n=1;
+    return {
+      increment:function() {
+        n =n*10;
+      return {value:n, done:false};
+    }
+  };
+}
+
+
+
+
+const counter= myfunction();
+counter.increment();
+counter.increment();
+console.log(counter.increment().value);
+
+</script>
+
