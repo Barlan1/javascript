@@ -1,0 +1,35 @@
+<p id="Yogi"></p>
+<p id="demo"></p>
+<script>
+const fruits={ Banana:200, Orange:300,Papaya:400};
+
+let text='';
+
+for(let[fruit,value] of Object.entries(fruits)) {
+  text += fruit + " : " + value + "<br>";
+}
+
+document.getElementById("demo").innerHTML=text;
+
+//end of part
+
+const person= {
+  firstName:"Julie",
+  lastName:"Kumari",
+  age:23,
+  eyeColor:"Black"
+};
+const person2={
+  firstName:"Yogita",
+  lastName:"Mina"
+};
+Object.assign(person,person2);
+
+let text1 =  '';
+for(let[name,value] of Object.entries(person))
+{
+text1 += name + " : " + value + "<br>";
+}
+document.getElementById("Yogi").innerHTML= text1;
+
+</script>
