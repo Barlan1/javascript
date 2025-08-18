@@ -1,0 +1,28 @@
+<h2>object</h2>
+
+<p id ="demo"></p>
+<p id = "temo"></p>
+<script>
+
+function Person(first, last, age) {
+  this.firstName= first;
+  this.lastName = last;
+  this.age= age;
+}
+
+const father= new Person("Vikas", "kumar", 33);
+const mother = new Person("Yogita", "Kumari", 22);
+
+Person.prototype.language="Hindi";
+
+document.getElementById("demo").innerHTML=
+"I am "+ father.firstName + " husband of "+ mother.firstName+
+" and she speakes "+ mother.language+ ".";
+
+mother.changeName = function(name){
+  this.lastName = name;
+}
+mother.changeName(" Meena ");
+document.getElementById("temo").innerHTML=
+"Her first name is " + mother.firstName + " and  last name is "+ mother.lastName;
+</script>
