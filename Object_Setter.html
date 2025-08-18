@@ -1,0 +1,30 @@
+<p id="Set"></p>
+
+<p id= "Get"></p>
+
+
+<script>
+  /*set */
+const person={
+  fName:"Yogita",
+  lNmae:"Mina",
+  language:" ",
+  set lang(val){
+    this.language=val.toUpperCase();
+  }
+};
+person.lang= "en";
+document.getElementById("Set").innerHTML=person.language;
+
+//get method
+const human={
+  hName:"Vikas",
+  xName:"Meena",
+  color:"black",
+  get col() {
+    return this.color.toUpperCase();
+  }
+};
+document.getElementById("Get").innerHTML=human.col;
+
+</script>
