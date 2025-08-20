@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Nested JavaScript Objects and Arrays.</h2>
+
+<p id="demo"></p>
+
+<script>
+let x = "";
+ const myObj={
+    name: "jhon",
+    age: 20,
+    cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+     {name: "Tata",models:["Tiago","Harriar","Truck"]},
+     {name:"Mahindra", models:["3XO", "700","Bolero", "Major"]}
+     
+      ]
+      }
+      
+      
+for (let i in myObj.cars) {
+ 
+  x += "<h2>"+ myObj.cars[i].name + "</h2>"; 
+   for(let j in myObj.cars[i].models) {
+     x += "<ul><li>" + myObj.cars[i].models[j]+ "</li></ul>";
+ }
+ }
+ 
+      
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
