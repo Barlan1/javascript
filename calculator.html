@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      Calculator
+    </title>
+  </head>
+<body>
+  <p><button onclick="addOne()">1</button>
+    <button onclick="addTwo()">2</button>
+    <button onclick="addThree()">3</button></p>
+    <p><button onclick="addFour()">4</button>
+      <button onclick="addFive()">5</button>
+      <button onclick="addSix()">6</button></p>
+      <p><button onclick="addSeven()">7</button>
+        <button onclick="addEight()">8</button>
+        <button onclick="addNine()">9</button></p>
+        <button onclick="addZero()">0</button></p>
+
+  <button onclick="addition()">+</button>
+  <button onclick="multiplication()">*</button>
+  <button onclick="subtraction()">-</button>
+  <button onclick="division()">/</button>
+
+  <button onclick="result()">=</button>
+   <button onclick ="reset()">reset</button>
+<script>
+
+   let calculation='';
+
+   function addOne(){
+    console.log(calculation+= '1');
+   };
+   function addTwo(){
+    console.log(calculation+= '2');
+   };
+   function addThree(){
+    console.log(calculation+= '3');
+   };
+   function addFour(){
+    console.log(calculation+= '4');
+   };
+   function addFive(){
+    console.log(calculation+= '5');
+   };
+   function addSix(){
+    console.log(calculation+= '6');
+   };
+   function addSeven(){
+    console.log(calculation+= '7');
+   };
+   function addEight(){
+    console.log(calculation+= '8');
+   };
+   function addNine(){
+    console.log(calculation+= '9');
+   };
+   function addZero(){
+    console.log(calculation+= '0');
+   };
+   function addition(){
+    console.log(calculation+= ' + ');
+   };
+   function division(){
+    console.log(calculation+= ' / ');
+   };
+   function multiplication(){
+    console.log(calculation+= ' * ');
+   };
+   function subtraction(){
+    console.log(calculation+= ' - ');
+   };
+   function result(){
+    calculation= eval(calculation);
+     console.log(calculation)
+   };
+   function reset(){
+    calculation=' ';
+    console.log(calculation);
+   }
+</script>
+
+</body>
+
+
+</html>
