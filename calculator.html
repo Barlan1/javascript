@@ -7,81 +7,70 @@
     </title>
   </head>
 <body>
-  <p><button onclick="addOne()">1</button>
-    <button onclick="addTwo()">2</button>
-    <button onclick="addThree()">3</button></p>
-    <p><button onclick="addFour()">4</button>
-      <button onclick="addFive()">5</button>
-      <button onclick="addSix()">6</button></p>
-      <p><button onclick="addSeven()">7</button>
-        <button onclick="addEight()">8</button>
-        <button onclick="addNine()">9</button></p>
-        <button onclick="addZero()">0</button></p>
+  <p><button onclick="updateCalc(1)">1</button>
+    <button onclick="updateCalc(2)">2</button>
+    <button onclick="updateCalc(3)">3</button></p>
+  <p><button onclick="updateCalc(4)">4</button>
+    <button onclick="updateCalc(5)">5</button>
+    <button onclick="updateCalc(6)">6</button></p>
+  <p><button onclick="updateCalc(7)">7</button>
+    <button onclick="updateCalc(8)">8</button>
+    <button onclick="updateCalc(9)">9</button></p>
+    <p><button onclick="updateCalc(0)">0</button></p>
 
-  <button onclick="addition()">+</button>
-  <button onclick="multiplication()">*</button>
-  <button onclick="subtraction()">-</button>
-  <button onclick="division()">/</button>
+  <button onclick="operate('add')">+</button>
+  <button onclick="operate('sub')">-</button>
+  <button onclick="operate('mul')">*</button>
+  <button onclick="operate('div')">/</button>
 
-  <button onclick="result()">=</button>
-   <button onclick ="reset()">reset</button>
+  <button onclick="operate('result')">=</button>
+<p><button onclick= "operate('reset')">reset</button></p>
 <script>
 
    let calculation='';
-
-   function addOne(){
-    console.log(calculation+= '1');
-   };
-   function addTwo(){
-    console.log(calculation+= '2');
-   };
-   function addThree(){
-    console.log(calculation+= '3');
-   };
-   function addFour(){
-    console.log(calculation+= '4');
-   };
-   function addFive(){
-    console.log(calculation+= '5');
-   };
-   function addSix(){
-    console.log(calculation+= '6');
-   };
-   function addSeven(){
-    console.log(calculation+= '7');
-   };
-   function addEight(){
-    console.log(calculation+= '8');
-   };
-   function addNine(){
-    console.log(calculation+= '9');
-   };
-   function addZero(){
-    console.log(calculation+= '0');
-   };
-   function addition(){
-    console.log(calculation+= ' + ');
-   };
-   function division(){
-    console.log(calculation+= ' / ');
-   };
-   function multiplication(){
-    console.log(calculation+= ' * ');
-   };
-   function subtraction(){
-    console.log(calculation+= ' - ');
-   };
-   function result(){
-    calculation= eval(calculation);
-     console.log(calculation)
-   };
-   function reset(){
-    calculation=' ';
-    console.log(calculation);
-   }
+   let num='';
+   function updateCalc(num){
+      if(num ===0){
+        console.log(calculation +='0');
+      }
+      else if(num===1){
+        console.log(calculation +='1');
+      }else if(num===2){
+        console.log(calculation +='2');
+      }else if(num===3){
+        console.log(calculation +='3');
+      }else if(num===4){
+        console.log(calculation +='4');
+      }else if(num===5){
+        console.log(calculation +='5');
+      }else if(num===6){
+        console.log(calculation +='6');
+      }else if(num===7){
+        console.log(calculation +='7');
+      }else if(num===8){
+        console.log(calculation +='8');
+      }else if(num===9){
+        console.log(calculation +='9');
+      }
+  }   
+  const obj='';
+   function operate(obj){
+     if(obj=='add'){
+      console.log(calculation += ' + ');
+     } else if(obj=='sub'){
+      console.log(calculation += ' - ');
+     } else if(obj=='mul'){
+      console.log(calculation += ' * ');
+     } else if(obj=='div'){
+      console.log(calculation += ' / ');
+     }else if(obj=='result'){
+      calculation= eval(calculation);
+      console.log(calculation);
+     }else if (obj=='reset'){
+      calculation = '';
+      console.log(calculation);
+     }
+    }
 </script>
-
 </body>
-
-
 </html>
