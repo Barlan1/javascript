@@ -1,0 +1,27 @@
+
+
+<h2> Shallow copy and Deep copy</h2>
+
+<script>
+const arr= {
+  Name:"viaks",
+  details:{  
+  Roll: 2,
+  City:  "Delhi"
+ }
+};
+console.log(arr);
+//shallow copy means copy in both objects
+const shallowcopy=  Object.assign({}, arr);
+shallowcopy.details.City= "Barlan";
+console.log(shallowcopy);
+console.log(arr);
+
+console.log("Now print deep copy which don't alter orginal obj");
+//deepcopy only alter the new object
+const deepcopy= JSON.parse(JSON.stringify(arr));
+deepcopy.details.City= "Patna";
+console.log(deepcopy);
+console.log(arr);
+
+</script>
