@@ -1,0 +1,28 @@
+
+<p id="demo"></p> 
+<script>
+
+function show(some){
+  document.getElementById("demo").innerHTML=some;
+}
+
+let mypromise= new Promise(function(resolve, reject){
+
+  //this part is producing 
+
+  let name= "Yogita" + "Vikas";
+  if(name.length > 11){
+    resolve("<p>x is 20 and we compared it with 10,  </p>Yes it is Greater");
+  }
+  else {
+    reject(" NO it is less");
+  }
+});
+
+//this part will consume
+mypromise.then(
+    function(value){ show(value);},
+  function(error){ show(error);}
+);
+
+</script>
