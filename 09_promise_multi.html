@@ -1,0 +1,21 @@
+<script>
+  //here is  a function is used to get new promises every time
+  //return an array once all promises are fulfilled
+
+  //if the array of promises have less time than single promise 
+ //then array will be fulfilled first  due to the Promise.all property
+  const tout= function(t){
+  return new Promise(function(resolve,reject){
+    setTimeout(function(){ resolve(`completed in ${t}`) },t )
+  })
+ }
+ //single promise
+ tout(1000).then(function(result){
+  console.log(result+ "<br>");
+ }) 
+//array of promises
+ Promise.all([tout(100), tout(100), tout(200)])
+   .then(function(result){
+    console.log(result);
+   })
+</script>
