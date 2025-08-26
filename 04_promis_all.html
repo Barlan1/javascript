@@ -1,0 +1,39 @@
+
+<p id="temo"></p>
+<!--uncomment this and below to see result on page-->
+<!-- <p id="demo"></p> -->
+<script>
+let promise1= new Promise(function(resolve, reject){
+  setTimeout(resolve,50, " Hello Yogita ");
+});
+
+let promise2= new Promise((resolve,reject) => {
+  setTimeout(resolve,300, " Hi Vikas  ");
+});
+
+let promise3=new Promise((resolve,reject) => {
+  setTimeout(resolve,2000," Hello I am Late ");
+});
+// 1, Promis.all method
+Promise.all([promise1,promise2,promise3]).then((value)=>{
+  //document.getElementById("demo").innerHTML=value;
+  //you can console it
+  console.log(value);
+});
+// 2, another method fulfilled 
+Promise.allSettled([promise1,promise2,promise3]).then((results)=>
+  results.forEach((x)=> show(x.status+" ")),
+);
+// 3, Promis.any() //it prints the any timeout
+Promise.any([promise1, promise2,promise3]).then((x)=>{
+  show(x+"<br> this results for Promise.any()<br><br> ");
+});
+// 4, Promis.race() gives shortest timeout
+Promise.race([promise1,promise2,promise3]).then((x)=>{
+show(x+" <br> This results for Promise.race() <br><br>");
+});
+
+function show(some) {
+  document.getElementById("temo").innerHTML += some;
+}
+</script>
