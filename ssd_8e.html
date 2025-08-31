@@ -1,0 +1,37 @@
+<script>
+ 
+
+
+  function isSameProduct (product1, product2){
+     if(product1.price === product2.price && 
+     product1.name===product2.name){
+       return true;
+     } else 
+            return false;
+    }
+  
+    function isSameProduct (product2, product3){
+     return product2.price === product3.price && 
+            product2.name === product3.name
+    }
+
+    const product1={
+    name:'football',
+    price: 3000
+  }; 
+
+  const product2= {
+      name:'basketball',
+      price: 2095
+    };
+  const product3= {
+      name:'basketball',
+      price: 2095
+    };
+  console.log(isSameProduct(product1,product2));
+
+  console.log(isSameProduct(product2,product2));
+
+  
+  
+  </script>
