@@ -1,0 +1,29 @@
+
+
+<script>
+ 
+const p=function(t){
+  return new Promise(function(resolve, reject){
+    setTimeout(function(){
+      if(t===2000){
+        reject(`rejected in ${t}`)
+      }else {
+          resolve( `resolve in ${t}` )
+      }
+    },t)
+  })
+}
+ 
+
+
+ const durations= [1000,2000,3000]
+ const promises= []
+
+durations.map(function(time){promises.push(p(time))})
+
+console.log(promises)
+
+Promise.all(promises).then(function(value){console.log(value)})
+.catch(function(error){console.log(error)})
+
+ </script> 
