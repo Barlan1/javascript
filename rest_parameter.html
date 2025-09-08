@@ -1,0 +1,26 @@
+<script>
+
+function fun(...input){
+  let sum=0;
+  for( let i of input){
+    sum +=i;
+  }
+  return sum;
+}
+
+
+console.log(fun(1,33,4,5));
+console.log(fun(1,4,5));
+console.log(fun(1,4));
+
+function fun2(a,b, ...c){
+  console.log(`${a} ${b}`)
+  console.log(c)
+  console.log(c[0])
+  console.log(c.length)
+  console.log(c.indexOf("DMax"))//return -1 due to case sensitive
+}
+fun2('vikas',"raju","Max",'trax',"Dmax");
+
+
+</script>
