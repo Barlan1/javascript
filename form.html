@@ -1,0 +1,57 @@
+
+<form>
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" placeholder="first name"><br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label for="pill">choose pill</label><br>
+
+    <input type="radio" id="redpill" name="fav-name" value="Redpill">    
+    <label for="redpill">Redpill</label><br>
+     <!-- here name with same value in radio buttons
+     will make us to check only one choice-->
+    <input type="radio" id="blackpill" name="fav-name" value="Blackpill">
+    <label for="blackpill">Blackpill</label><br>
+
+    <div style="background-color:rgb(207, 203, 200)";>
+
+    <p> select film you like</p>
+    <input type="checkbox" id="holly" name="movie">
+    <label for="holly">hollywood</label><br>
+    
+    <input type="checkbox" id="bolly" name="movie">
+    <label for="bolly">bollywood</label><br>
+
+    <input type="checkbox" id="tolly" name="movie">
+    <label for="tolly">Tollywood</label><br>
+</div>
+
+<div><h2>there is function to check boxes one at a time for checkbox</h2>
+<h3>Let's call them smart boxes</h3>
+<h4>here we gets <strong>getElementsByName</strong> method not getElementByName</h4></div>
+
+<script>
+    function onlyOne(value) {
+        var checkboxes = document.getElementsByName(value.name)
+        checkboxes.forEach((item) => {
+            if (item !== value) item.checked = false
+        })
+    }
+</script>    
+    <input type="checkbox" id="bolly" name="check" onclick="onlyOne(this)">
+    <label for="bolly"> bollywood</label><br>
+
+    <input type="checkbox" id="tolly" name="check" onclick="onlyOne(this)">
+    <label for="tolly"> Tollywood</label><br>
+
+    <input type="checkbox"  id="holly" name="check" onclick="onlyOne(this)">
+    <label for="holly"> Hollywood</label><br>
+
+    <input type="checkbox" id="kolly" name="check" onclick="onlyOne(this)">
+    <label for="kolly" >Kollywood</label>
+
+
+    
+</form>
+  
