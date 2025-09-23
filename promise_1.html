@@ -1,0 +1,15 @@
+<script>
+
+  let mypromise= new Promise((resolve,reject)=>{
+    let success=true;
+    if(success==true){
+      resolve("Success");
+    } else{
+      reject("error no output");
+    }
+  })
+    mypromise
+    .then((msg)=> console.log("resolve",msg))
+    .catch((error)=> console.log("reject", error));
+  
+</script>
