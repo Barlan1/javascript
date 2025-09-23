@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+  <h1>object loop</h1>
+  <ul id="list"></ul>
+  <script>
+   
+
+   const fruits= ["Banana", "Mango", "Kela", "Bajara"];
+
+  let lang= "AbortTheMission";
+
+   const n= fruits.length;
+
+   const list = document.getElementById("list");
+
+   let text="";
+   for(let item of lang){
+   text += item +"     ";
+    document.getElementById("list").innerHTML=text;
+   }
+
+
+
+  </script>
+
+
+ </body>
+</html>
+
