@@ -1,0 +1,12 @@
+<script>
+
+ let p = new Promise((resolve,reject)=>{
+  resolve(10);
+ })
+
+ p  
+   .then((num)=> {console.log("The first Run:",num); return num*2;})
+   .then((num)=>{console.log("The second run",num); return num*3;})
+   .then ((num)=>{console.log("the third run:", num)});
+    
+</script>
