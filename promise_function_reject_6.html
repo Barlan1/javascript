@@ -1,0 +1,14 @@
+<script>
+
+function fun(){
+  let p= new Promise((resolve,reject)=>{
+    //setTimeout(()=>resolve("This is resolved"),2000);
+    setTimeout(()=>reject("This is rejected"),2000);
+  });
+  //p.then((value)=> console.log(value));
+  p.catch((value)=> console.log(value));
+}
+fun();
+ 
+    
+</script>
