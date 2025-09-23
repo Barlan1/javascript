@@ -1,0 +1,15 @@
+<script>
+
+  let mypromise= new Promise((resolve,reject)=>{
+    let success= Math.random()> 0.5;
+    //console.log(success);
+
+    if(success){
+      resolve("yes delivered")
+    }
+    else{reject("rejected right!")}
+  });
+  mypromise.then((value)=>(console.log(value)))
+           .catch((value)=>(console.log(value)));
+    
+</script>
