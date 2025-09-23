@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+  <h1>object loop</h1>
+  <ul id="list"></ul>
+  <script>
+   
+
+   const fruits= [
+    {type:  "Banana"}, 
+    {model:"Mango"},
+    {brand: "Kela"},
+    {color: "Bajara"}
+  ];
+
+ 
+
+   const list = document.getElementById("list");
+
+    for(let item of fruits){
+     let li= document.createElement("li");
+     li.textContent=Object.values(item);
+     list.appendChild(li);
+   }
+
+
+
+  </script>
+
+
+ </body>
+</html>
+
