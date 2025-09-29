@@ -1,0 +1,32 @@
+//create objects //Object.keys(obj)
+
+<p id="demo"></p>
+ <script>
+
+  const student = {
+    name: "vikas",
+    age: 20,
+    class:12,
+    subject: "Science",
+    marks: {
+      math:90,
+      english:77
+    }
+  };
+    
+  for(let [key, value] of Object.entries(student) ) {
+    
+    if( typeof value === "object"){
+       console.log(key + ":");
+      for(let [subkey, subvalue] of Object.entries(value)){
+        console.log(" "+ subkey, subvalue);
+      }
+    } else{
+     console.log(key, value);
+    }
+  }
+
+
+
+
+</script>
