@@ -1,0 +1,24 @@
+//create objects //Object.keys(obj)
+
+ <script>
+
+  const cars= {
+    brand: "Mahindra",
+    model: "3X0",
+    year: 2024,
+    color:"black"
+  };
+
+let text ="";
+
+for(let [car,value] of Object.entries(cars)){
+  console.log(car, "=", value)
+}
+
+for(let [car, value] of Object.keys(car)){
+  console.log( ${car}, ${value} );
+}
+
+
+
+</script>
