@@ -1,0 +1,29 @@
+//create map_list of  Object 
+<p id="demo"></p>
+<ul id="list"></ul>
+<script>
+
+const car={
+  brand:"Mahindra",
+  model:"3XO",
+  year:2024,
+  color:"black"
+};
+
+let keys= Object.keys(car);
+
+let list = document.getElementById("list");
+
+
+//wrong for(let [key] of keys)
+
+for(let key of keys){
+  let li= document.createElement("li");
+
+  li.innerHTML= key +":"  + car[key];
+  list.appendChild(li);
+}
+
+
+
+</script>
