@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>object loop</h1>
+  <ul id="list"></ul>
+  <script>
+      const fruits= [
+    {type:  "Banana"}, 
+    {model:"Mango"},
+    {brand: "Kela"},
+    {color: "Bajara"}
+  ];
+   const list = document.getElementById("list");
+
+       list.innerHTML=fruits.map((t,i)=>`<li>${Object.keys(t)}-${Object.values(t)}</li>`).join("");
+
+  </script>
+ </body>
+</html>
+
