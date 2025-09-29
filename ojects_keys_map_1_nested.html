@@ -1,0 +1,44 @@
+//create map_list of  Object 
+<p id="demo"></p>
+<ul id="list"></ul>
+<script>
+
+const student={
+ name:"vikas",
+ age:20,
+ class:12,
+ marks:{
+  hindi:74,
+  math:22
+ }
+};
+
+let list = document.getElementById("list");
+
+for(let key of Object.keys(student)){
+  let li= document.createElement("li");
+  let value = student[key];
+   
+  if(typeof value ==="object"){
+    li.innerHTML = key +":";
+    const  nestedUl = document.createElement("ul");
+    
+    for(let subkey of Object.keys(value)){
+      let nestedLi= document.createElement("li");
+      nestedLi.innerHTML= subkey +":" + value[subkey];
+
+      nestedUl.appendChild(nestedLi);
+    }
+    li.appendChild(nestedUl);
+  }
+  else{
+    li.innerHTML= key+":" +value;
+  }
+  list.appendChild(li);
+
+}
+
+
+
+
+</script>
