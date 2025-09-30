@@ -1,0 +1,43 @@
+
+<script>
+  function createBankAccount(initialBalance){
+    let balance = initialBalance;
+  
+    return {
+      deposit(amount){
+        balance +=amount ;
+        console.log(`Deposit ${amount}. Balance ${balance}`);
+      },
+  
+      withdraw(amount){
+        if(amount <= balance){
+        balance= balance - amount ;
+        console.log(`Withdraw ${amount}. Balance ${balance} ` );
+        }
+         else{
+          console.log("insufficient balance");
+         }
+      },
+  
+      getBalance(){
+        console.log(`current Balance: ${balance}`);
+      }
+    };
+  }
+  const myAccount= createBankAccount(1000);
+  
+  myAccount.deposit(100);
+  myAccount.deposit(400);
+  myAccount.withdraw(999);
+  myAccount.getBalance();
+  
+  //saving
+   console.log("saving account")
+
+  const mySaving= createBankAccount(5000);
+  mySaving.getBalance();
+  mySaving.deposit(50000);
+  mySaving.withdraw(10000);
+  mySaving.getBalance();
+  
+  </script>
