@@ -1,0 +1,18 @@
+
+<script>
+
+ 
+function outer(){
+  let message ="hello";
+
+    function inner (){
+    console.log(message);
+  }
+  return inner;  //function add rreturs a function expression called fun
+               // this makes |^^ below inc to act as function.
+}
+
+const Hello = outer();
+Hello();
+ 
+</script>
