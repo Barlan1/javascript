@@ -1,0 +1,21 @@
+//roundtrip fromEntries to Entries
+
+<script>
+const student={name:"vikas", age:12};
+
+const entries= Object.entries(student);
+
+console.log(entries);//[Array(2), Array(2)]
+console.log(JSON.stringify(entries));//[["name","vikas"],["age",12]]
+console.table(entries);//makes a table
+
+
+const obj = Object.fromEntries(entries);
+
+
+console.log(obj);//{name: 'vikas', age: 12} return object
+
+console.log(obj.age);//32
+
+
+</script>
