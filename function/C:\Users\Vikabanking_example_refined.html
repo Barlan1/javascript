@@ -1,0 +1,37 @@
+
+
+<script>
+
+  function createBankAccount(initialBalance){
+
+    let balance= initialBalance;
+   return{
+    deposit: function(amount){
+      balance +=amount;
+      console.log( ` Amount deposited ${amount}. Balance ${balance}  `);
+    },
+
+    withdraw: function(amount){
+      if(amount < balance){
+      balance -=amount;
+      console.log( ` Amount withdraw ${amount}. Balance ${balance}  `);
+    } else{
+        console.log("insufficient balance");
+    }
+  },
+    getBalance:function(){
+      console.log( ` Balance ${balance} `);
+    }
+  }
+}
+
+  let myAccount= createBankAccount(10000);
+  myAccount.getBalance(12000);
+
+  myAccount.deposit(12000);
+  myAccount.deposit(4000);
+  myAccount.withdraw(7000);
+  myAccount.getBalance();
+
+
+</script>
