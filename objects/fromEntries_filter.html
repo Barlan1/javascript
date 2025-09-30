@@ -1,0 +1,12 @@
+//making object from Map
+
+<script>
+
+const student= {name:"vikas", age:20, marks:30};
+
+const filtered= Object.fromEntries(Object.entries(student).filter(([key,value]) => typeof value==="number"));
+
+console.log(filtered);
+
+
+</script>
