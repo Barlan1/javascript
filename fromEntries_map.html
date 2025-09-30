@@ -1,0 +1,21 @@
+//making object from Map
+
+<script>
+const map= new Map([["name","vikas"],["age" , 32],["class",6]]);
+
+const obj= Object.fromEntries(map);
+console.log(obj);//{name: 'vikas', age: 32, class: 6} return object
+
+console.log(obj.age);//32
+
+//example 2
+
+const map2= new Map([
+  ["product", "TV"],
+  ["price",2100]
+]);
+
+console.log(Object.fromEntries(map2));// returns object
+
+
+</script>
