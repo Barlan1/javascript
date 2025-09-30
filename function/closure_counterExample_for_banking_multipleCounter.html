@@ -1,0 +1,37 @@
+
+
+
+<script>
+  function createCounter(){
+    let count =0;
+  
+    return {
+      increment(){
+        count=count  + 500;
+        console.log("deposited count: ", count);
+      },
+  
+      decrement(){
+        count=count - 100;
+        console.log("withdraw count:", count);
+      },
+  
+      getCount(){
+        console.log("current count:", count);
+      }
+    };
+  }
+  const counter1= createCounter();
+  
+  counter1.increment();
+  counter1.increment();
+  counter1.increment();
+  counter1.decrement();
+  counter1.getCount();
+  
+  const counter2 = createCounter();
+  counter2.increment();
+  counter2.increment();
+  counter2.decrement();
+  
+  </script>
