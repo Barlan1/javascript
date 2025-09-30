@@ -1,0 +1,20 @@
+
+<script>
+
+ 
+function add(){
+  let counter =0;
+
+    function fun (){
+    counter ++;
+    console.log(counter);
+  }
+  return fun;  //function add rreturs a function expression called fun
+               // this makes |^^ below inc to act as function.
+}
+
+const inc= add();
+inc();
+inc();
+inc();
+</script>
