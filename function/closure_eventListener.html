@@ -1,0 +1,30 @@
+
+<body>
+  <div id="log"></div>
+<script>
+
+ function setBtn(text){
+
+  let mybtn= document.createElement("button");
+  
+  mybtn.innerHTML=text;
+
+  let count=0;
+  document.body.appendChild(mybtn);
+
+  const log=document.getElementById("log");
+
+  mybtn.addEventListener("click",() =>{
+    count++;
+     log.textContent= (`${text} clicked ${count} times `)
+   })
+
+
+ }
+
+ setBtn("save");
+ setBtn("cancel")
+
+</script>
+
+</body>
