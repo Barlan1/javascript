@@ -1,0 +1,21 @@
+
+<script>
+
+ 
+function makeCounter(){
+  let count =0;
+
+    return function (){
+      count++;
+    console.log(count);
+  }
+     //function makeCounter returs a function expression called fun
+               // this makes |^^ below counter1 to act as function.
+}
+
+const counter1 = makeCounter();
+counter1();
+counter1();
+counter1();
+ 
+</script>
